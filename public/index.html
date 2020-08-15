@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Pliny</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="icon" href="img/profile.png" type="image/png">
+        <script defer src="src/main.js"></script>
+    </head>
+
+    <body>
+        <div id="sidepanel" class="sidepanel">
+            <p id="cross" onclick="closeNav()">&times;</p>
+            <a href="/about">About</a>
+            <a href="/tools">Tools</a>
+            <a href="/forum">Forums</a>
+            <a href="/terms">Terms</a>
+            <img id="icon" src="img/profile.png">
+        </div>
+
+        <div class="header">
+            <div class="nav">
+                <p id="icon" onclick="openNav()">&#9776;</p>
+            </div>
+            <div class="title">PLINY</div>
+            <div class="motto">
+                <p id="text">Civic correspondence reimagined</p>
+            </div>
+        </div>
+
+        <div class="main">
+            <section>
+                <div id="section-img" class="section-container">
+                    <img id="pliny" class="img" src="img/pliny.png">
+                </div>
+                <div id="section-text" class="section-container">
+                    <div id="quote" class="text">"There is no lack of readers and listeners; it is for us to produce something worth being written and heard."</div>
+                </div>
+            </section>
+            <section>
+                <div id="section-text" class="section-container">
+                    <div id="history" class="text"><b>Pliny the Younger</b> was a prolific writer of letters, many of which were addressed to the <b>Emperor Trajan</b>.<br><br>His works remind us the effect words can have on government and politics.</div>
+                </div>
+                <div id="section-img" class="section-container">
+                    <img id="trajan" class="img" src="img/trajan.png">
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

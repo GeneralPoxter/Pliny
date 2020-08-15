@@ -1,0 +1,25 @@
+{
+  "name": "pliny",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeneralPoxter/Pliny.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeneralPoxter/Pliny/issues"
+  },
+  "homepage": "https://github.com/GeneralPoxter/Pliny#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "googleapis": "^58.0.0"
+  }
+}
