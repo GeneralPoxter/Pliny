@@ -1,33 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Pliny - About</title>
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <link rel="icon" href="img/profile.png" type="image/png">
-        <script defer src="src/main.js"></script>
-    </head>
 
-    <body>
-        <div id="sidepanel" class="sidepanel">
-            <p id="cross" onclick="closeNav()">&times;</p>
-            <a href="/">Home</a>
-            <a href="/tools">Tools</a>
-            <a href="/forum">Forums</a>
-            <a href="/terms">Terms</a>
-            <img id="icon" src="img/profile.png">
+<head>
+    <title>Pliny - About</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="icon" href="img/profile.png" type="image/png" />
+    <script defer src="src/main.js"></script>
+</head>
+
+<body>
+    <div id="sidepanel" class="sidepanel">
+        <p id="cross" onclick="closeNav()">&times;</p>
+        <a href="/">Home</a>
+        <a href="/rep">RepSearch</a>
+        <a href="/news">NewsHub</a>
+        <a>About <span class="arrow">&#9664</span></a>
+        <img id="icon" src="img/profile.png" />
+    </div>
+
+    <div class="header">
+        <div class="nav">
+            <p id="icon" onclick="openNav()">&#9776;</p>
         </div>
+        <div class="title">PLINY</div>
+        <div class="motto">
+            <p id="text">Civic correspondence reimagined</p>
+        </div>
+    </div>
 
-        <div class="header">
-            <div class="nav">
-                <p id="icon" onclick="openNav()">&#9776;</p>
+    <div class="main">
+        <section>
+            <div id="section-ui" class="section-container">
+                <div id="about" class="ui">
+                    <div class="title">About</div>
+                    <div class="text">
+                        <b>Pliny</b> is an online platform connecting citizens with their government.
+                        <br><br>
+                        This website is named after the Roman author <b><a
+                                href="https://en.wikipedia.org/wiki/Pliny_the_Younger" target="_blank">Pliny the
+                                Younger</a></b>, who was a prolific writer of letters - many of which were addressed to
+                        the <b><a href="https://en.wikipedia.org/wiki/Trajan" target="_blank">Emperor Trajan</a></b>.
+                        His works remind us of the powerful effect written correspondence can have on government
+                        and politics.
+                        <br><br>
+                        <b>Pliny</b> allows the modern citizen to communicate their concerns and ideas - as
+                        effectively as Pliny the Younger did - with a suite of easy-to-use tools.
+                        <br><br>
+                        <b><a href="/rep">RepSearch</a></b>:
+                        <p style="margin-left:5%">Powered by the <b><a
+                                    href="https://developers.google.com/civic-information" target="_blank">Google Civic
+                                    Information API</a></b>, RepSearch allows users to quickly find the mailing
+                            addresses, phone numbers, emails, websites, and social media accounts of U.S.
+                            representatives and leaders. After specifying their locality, users find a detailed
+                            contact list for local, state, and national-level policy-makers.</p>
+                        <br>
+                        <b><a href="/news">NewsHub</a></b>:
+                        <p style="margin-left:5%">If users are unsure of what to write or want to discuss the latest
+                            events, they can find inspiration in the latest news from the <b><a href="https://gnews.io/"
+                                    target="_blank">GNews API</a></b> featured in the NewsHub.</p>
+                    </div>
+                </div>
             </div>
-            <div class="title">PLINY</div>
-            <div class="motto">
-                <p id="text">Civic correspondence reimagined</p>
-            </div>
-        </div>
+        </section>
+        <footer>Copyright © 2020 Jason Liu. All rights reserved.</footer>
+    </div>
+</body>
 
-        <div class="main">
-        </div>
-    </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pliny - NewsHub</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="icon" href="img/profile.png" type="image/png" />
+    <script defer src="src/main.js"></script>
+</head>
+
+<body onload="getNews()">
+    <div id="sidepanel" class="sidepanel">
+        <p id="cross" onclick="closeNav()">&times;</p>
+        <a href="/">Home</a>
+        <a href="/rep">RepSearch</a>
+        <a>NewsHub <span class="arrow">&#9664</span></a>
+        <a href="/about">About</a>
+        <img id="icon" src="img/profile.png" />
+    </div>
+
+    <div class="header">
+        <div class="nav">
+            <p id="icon" onclick="openNav()">&#9776;</p>
+        </div>
+        <div class="title">PLINY</div>
+        <div class="motto">
+            <p id="text">Civic correspondence reimagined</p>
+        </div>
+    </div>
+
+    <div class="main">
+        <section>
+            <div id="section-ui" class="section-container">
+                <div id="newshub" class="ui">
+                    <div class="title">NewsHub</div>
+                    <table id="news-table">
+                        <thead>
+                            <tr>
+                                <th width="70%"></th>
+                                <th width="8%"></th>
+                                <th width="22%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <footer>Copyright © 2020 Jason Liu. All rights reserved.</footer>
+    </div>
+</body>
+
+</html>

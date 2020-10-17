@@ -4,8 +4,8 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    background: #EFEFEF;
-    background: linear-gradient(#EFEFEF, #696969), linear-gradient(to right, #888888, #C2C2C2, #888888);
+    background: #efefef;
+    background: linear-gradient(#efefef, #696969), linear-gradient(to right, #888888, #c2c2c2, #888888);
     background-blend-mode: screen;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,6 +20,15 @@ body::-webkit-scrollbar {
 p {
     margin: 0px;
     padding: 0px;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #696969;
 }
 
 .sidepanel {
@@ -42,34 +51,37 @@ p {
 }
 
 .sidepanel #cross {
-    color: #C2C2C2;
+    color: #c2c2c2;
     font-size: 100px;
-    padding-right: 20px;
-    text-align: right;
+    padding-left: 280px;
     transition: 0.3s;
 }
 
 .sidepanel #cross:hover {
-    color: #FFFFFF;
+    color: #ffffff;
     cursor: pointer;
 }
 
 .sidepanel a {
-    color: #C2C2C2;
+    color: #c2c2c2;
     font-size: 48px;
     margin: 12px 24px 12px 24px;
-    text-decoration: none;
     white-space: nowrap;
     transition: 0.3s;
 }
 
 .sidepanel a:hover {
-    color: #FFFFFF;
+    color: #ffffff;
+}
+
+.sidepanel .arrow {
+    position: absolute;
+    left: 290px;
 }
 
 .sidepanel #icon {
     margin-left: 50px;
-    width: 200px;
+    width: 250px;
     padding-top: 48px;
     transition: 0.3s;
     filter: brightness(1.5);
@@ -83,8 +95,8 @@ p {
     padding-top: 15px;
     padding-bottom: 15px;
     width: 100vw;
-    background: #FAFAFA;
-    background: linear-gradient(to right, #F8F8F8, #FEFEFE, #F8F8F8);
+    background: #fafafa;
+    background: linear-gradient(to right, #f8f8f8, #fefefe, #f8f8f8);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -116,7 +128,7 @@ p {
 
 .motto #text {
     color: #000000;
-    font-size: 32px;
+    font-size: min(32px, 2vw);
     font-style: italic;
     text-align: right;
     padding-right: 32px;
@@ -132,7 +144,7 @@ section {
     display: flex;
     flex-direction: row;
     width: 80vw;
-    padding: 40px;
+    padding: 5px;
 }
 
 .section-container {
@@ -147,7 +159,7 @@ section {
 }
 
 .section-container .img {
-    width: 100%;
+    width: 70%;
     height: auto;
 }
 
@@ -157,12 +169,14 @@ section {
 
 .section-container .text {
     color: #333333;
+    font-size: 1.75vw;
     font-family: 'Work Sans', sans-serif;
     text-align: center;
-    margin: 4vw;
-    padding: 4vw;
-    background-color: #FAFAFA;
+    margin: 2vw;
+    padding: 3vw;
+    background-color: #fafafa;
     border-radius: 10px;
+    filter: drop-shadow(40px 20px 6px #aaaaaa);
 }
 
 #section-ui {
@@ -177,28 +191,17 @@ section {
     text-align: center;
     padding: 2vw;
     padding-top: 0;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     border-radius: 10px;
     width: 100%;
 }
 
 #pliny {
-    filter: drop-shadow(40px 20px 5px #AAAAAA);
-}
-
-#quote {
-    font-size: 2vw;
-    font-style: italic;
-    filter: drop-shadow(40px 20px 6px #AAAAAA);
+    filter: drop-shadow(40px 20px 5px #aaaaaa);
 }
 
 #trajan {
-    filter: drop-shadow(-40px 20px 5px #AAAAAA);
-}
-
-#history {
-    font-size: 1.5vw;
-    filter: drop-shadow(-40px 20px 6px #AAAAAA);
+    filter: drop-shadow(-40px 20px 5px #aaaaaa);
 }
 
 #rep-search .title {
@@ -210,7 +213,7 @@ section {
 }
 
 #rep-search input {
-    border: 1px solid #AAAAAA;
+    border: 1px solid #aaaaaa;
     border-radius: 10px;
     outline: none;
     font-size: 2vw;
@@ -231,7 +234,7 @@ section {
 
 #rep-table-container {
     margin-top: 2vw;
-    border: 1px solid #AAAAAA;
+    border: 1px solid #aaaaaa;
     border-radius: 10px;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -245,7 +248,7 @@ section {
 }
 
 #rep-table-container::-webkit-scrollbar-thumb {
-    background-color: #C2C2C2;
+    background-color: #c2c2c2;
     border-radius: 10px;
 }
 
@@ -253,8 +256,9 @@ section {
     background-color: #909090;
 }
 
-#rep-table {
-    background: #FFFFFF;
+#rep-table,
+#news-table {
+    background: #ffffff;
     border-collapse: separate;
     border-spacing: 0;
     width: 101%;
@@ -263,9 +267,9 @@ section {
 }
 
 #rep-table thead th {
-    background: #EFEFEF;
+    background: #efefef;
     border-bottom: 2px solid #888888;
-    border-left: 1px solid #AAAAAA;
+    border-left: 1px solid #aaaaaa;
     position: sticky;
     padding: 12px;
     top: 0;
@@ -277,12 +281,13 @@ section {
 
 #rep-table td {
     height: 2vw;
-    border-left: 1px solid #AAAAAA;
-    padding: 12px;
+    border-left: 1px solid #aaaaaa;
+    padding: 14px;
 }
 
-#rep-table tr:nth-child(even) {
-    background: #FAFAFA;
+#rep-table tr:nth-child(even),
+#news-table tr:nth-child(even) {
+    background: #fafafa;
 }
 
 #rep-table td:first-child {
@@ -291,22 +296,28 @@ section {
 
 #rep-table img {
     object-fit: contain;
-    max-width: 2.5vw;
+    max-width: 3vw;
     vertical-align: middle;
-    border-radius: 4px;
-    margin-right: 12px;
+    border-radius: 6px;
+    margin-right: 10px;
 }
 
 #rep-table .icon {
     margin-right: 8px;
-    max-width: 1.5vw;
+    margin-bottom: 4px;
+    max-width: 1.75vw;
+}
+
+#rep-table .icon:hover {
+    filter: brightness(1.75);
 }
 
 #rep-table a {
     cursor: pointer;
 }
 
-#rep-labels, #rep-error {
+#rep-labels,
+#rep-error {
     width: 100%;
     display: none;
 }
@@ -314,6 +325,44 @@ section {
 #rep-error th {
     text-align: center;
     border-bottom: 0 !important;
+}
+
+#newshub .title, 
+#about .title {
+    color: #333333;
+    font-size: 4vw;
+    width: 100%;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+}
+
+#news-table {
+    font-size: 1.5vw;
+    table-layout: fixed;
+}
+
+#news-table td {
+    padding: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#about .text {
+    margin: 0;
+    text-align: left;
+    font-size: 1.25vw;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+    filter: none;
+}
+
+footer {
+    color: #333333;
+    font-size: 12px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1250px) {
@@ -328,7 +377,7 @@ section {
     }
     section {
         flex-direction: column;
-        padding: 20px;
+        padding: 5px;
         width: 80vw;
     }
     .section-container .img {
@@ -342,26 +391,28 @@ section {
     .section-container #quote {
         font-size: 32px;
     }
-    .section-container #history {
-        font-size: 24px;
-    }
     .section-container #title {
         font-size: 32px;
     }
-    #rep-search .title {
+    #rep-search .title,
+    #newshub .title,
+    #about .title {
         padding-top: 20px;
         padding-bottom: 10px;
         font-size: 32px;
+    }
+    #rep-table,
+    #news-table,
+    #about .text {
+        font-size: 16px;
     }
     #rep-search input {
         font-size: 24px;
         height: 32px;
     }
-    #rep-table {
-        font-size: 14px;
-    }
-    #rep-table thead th, #rep-table td {
-        padding: 4px;
+    #rep-table thead th,
+    #rep-table td {
+        padding: 6px;
     }
     #rep-table img {
         display: none;
@@ -369,6 +420,7 @@ section {
     #rep-table .icon {
         display: inline-block;
         margin-right: 4px;
-        max-width: 14px;
+        margin-bottom: 2px;
+        max-width: 18px;
     }
 }

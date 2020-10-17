@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pliny - RepSearch</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="icon" href="img/profile.png" type="image/png" />
+    <script defer src="src/main.js"></script>
+</head>
+
+<body>
+    <div id="sidepanel" class="sidepanel">
+        <p id="cross" onclick="closeNav()">&times;</p>
+        <a href="/">Home</a>
+        <a>RepSearch <span class="arrow">&#9664</span></a>
+        <a href="/news">NewsHub</a>
+        <a href="/about">About</a>
+        <img id="icon" src="img/profile.png" />
+    </div>
+
+    <div class="header">
+        <div class="nav">
+            <p id="icon" onclick="openNav()">&#9776;</p>
+        </div>
+        <div class="title">PLINY</div>
+        <div class="motto">
+            <p id="text">Civic correspondence reimagined</p>
+        </div>
+    </div>
+
+    <div class="main">
+        <section>
+            <div id="section-ui" class="section-container">
+                <div id="rep-search" class="ui">
+                    <div class="title">Find your representative</div>
+                    <form id="rep-form" autocomplete="off" onsubmit="repSearch(); return false;">
+                        <input id="searchbar" type="text" placeholder="Enter street address or zip code..." />
+                    </form>
+                    <div id="results">
+                        <div id="rep-table-container">
+                            <table id="rep-table">
+                                <thead>
+                                    <tr id="rep-error">
+                                        <th></th>
+                                    </tr>
+                                    <tr id="rep-labels">
+                                        <th width="25%">Profile</th>
+                                        <th width="25%">Office</th>
+                                        <th width="32%">Address</th>
+                                        <th width="18%">Contact</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>Copyright © 2020 Jason Liu. All rights reserved.</footer>
+    </div>
+</body>
+
+</html>
