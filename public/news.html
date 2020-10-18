@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="icon" href="img/profile.png" type="image/png" />
     <script defer src="src/main.js"></script>
+    <script defer src="src/news.js"></script>
 </head>
 
 <body onload="getNews()">
@@ -13,7 +14,7 @@
         <p id="cross" onclick="closeNav()">&times;</p>
         <a href="/">Home</a>
         <a href="/rep">RepSearch</a>
-        <a>NewsHub <span class="arrow">&#9664</span></a>
+        <a>NewsHub <span class="dot">&#9679</span></a>
         <a href="/about">About</a>
         <img id="icon" src="img/profile.png" />
     </div>
@@ -36,14 +37,15 @@
                     <table id="news-table">
                         <thead>
                             <tr>
-                                <th width="70%"></th>
-                                <th width="8%"></th>
-                                <th width="22%"></th>
+                                <th class="img"></th>
+                                <th class="ttl"></th>
+                                <th class="src"></th>
                             </tr>
                         </thead>
                         <tbody>
                         </tbody>
                     </table>
+                    <button id="dropdown" onclick="loadNews()"><img id="arrow" src="img/arrow.png" /></button>
                 </div>
             </div>
         </section>
